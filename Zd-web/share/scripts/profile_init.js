@@ -1,6 +1,9 @@
-//this script sets up some stuff so that the browser request that the prfiel be rendered
 
 
+var weburl = "http://avdirector1/z/";
+var anonurl = "http://avdirector1/a/";
+var signOutUrl = "http://avdirector1/";
+var baseurl = "http://avdirector1/";
 
 function test() {
 }
@@ -28,7 +31,6 @@ function dude() {
 //indicates that the user out of the profile - so call functions can be used to save resources and time (not i
 //re-call profile user nav or ads, etc)
 
-var globalInProfile = false;
 
 
 //this is a lis of ZMLHttpRequet cerate factory fuincitnos totry 
@@ -92,7 +94,7 @@ function setFeed() {
 	feed.style.width = "715px";
 
 	var itab = new oblTable(1,2);
-	var vertLine = oblC("i","http://preveoh.com/images/gray_vert_sep_715.gif");
+	var vertLine = oblC("i","http://avdirector1/images/gray_vert_sep_715.gif");
 	table.addContent(0,0,feed);
 	itab.addContent(0,0,vertLine);
 
@@ -113,7 +115,29 @@ function setFeed() {
 }
 		
 function runOnLoad() {
-	alert('in runOnLoad');
+	alert("you are in runonload");
+	alert("Your baseurl is " + baseurl);
+	var request = newRequest();
+        /*set body inner HTML to this*/
+        var url = baseurl + "backdrop.html";
+        request.open("GET",url,true);
+                request.onreadystatechange = function() {
+                        if( request.readyState == 4 ) {
+                                if( request.status == 200 ) {
+                                        document.getElementsByTagName("body")[0].innerHTML = request.responseText;
+					/*
+                                        setFeed();
+                                        globalBearings.setGarden(1);
+                                        if(state) {
+                                                YAHOO.util.History.navigate("nav",state);
+                                        }
+					*/
+
+                                }
+                        }
+        };
+        //now send.  we'll be waiting...
+        request.send(null);
 }
 
 function startHistoryManager(arg) {
