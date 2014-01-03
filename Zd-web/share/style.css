@@ -2,11 +2,12 @@ body {
   color: #333333;
   background-color: #f6f6f6; }
 
-div.Centered {
+div.CenterDiv {
   margin-left: auto;
   margin-right: auto;
   width: 944px;
   background-color: transparent; }
 
 .BackdropLogo {
+  height: 100px;
   background: url("http://www.zendesk.com/wp-content/themes/zendesk-twentyeleven/img/p-brand/downloads/Logo/Zendesk_logo_RGB.png"); }

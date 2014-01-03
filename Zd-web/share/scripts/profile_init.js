@@ -115,32 +115,37 @@ function setFeed() {
 }
 		
 function runOnLoad() {
-	alert("you are in runonload");
-	alert("Your baseurl is " + baseurl);
 	var request = newRequest();
-        /*set body inner HTML to this*/
+        /*set body inner HTML to backdrop, a sort of framework*/
         var url = baseurl + "backdrop.html";
         request.open("GET",url,true);
                 request.onreadystatechange = function() {
                         if( request.readyState == 4 ) {
                                 if( request.status == 200 ) {
                                         document.getElementsByTagName("body")[0].innerHTML = request.responseText;
-					/*
-                                        setFeed();
-                                        globalBearings.setGarden(1);
-                                        if(state) {
-                                                YAHOO.util.History.navigate("nav",state);
-                                        }
-					*/
+					startHistoryManager("home");
+					
 
                                 }
                         }
         };
-        //now send.  we'll be waiting...
         request.send(null);
 }
 
+//nav functions (navigation functions)
+var navHome = function() {
+        YAHOO.util.History.navigate('nav',"home");
+};
+
+
+//display functions
+function displayHome(){
+	alert("we are in display home");
+	var e = new zdHomeConcourse();
+}
+
 function startHistoryManager(arg) {
+	alert("we are starting history manager with state " + arg);
 	 /*YUI Histroy manager*/
         var bookmarkedState = YAHOO.util.History.getBookmarkedState("nav");
 	/*
@@ -152,9 +157,7 @@ function startHistoryManager(arg) {
 	/*
 	var initialMsg = msgState || "none";
 	*/
-
         YAHOO.util.History.register("nav", initialState, function(section) {
-
                 navStateHandler(section)
         });
 	/*
@@ -170,23 +173,29 @@ function startHistoryManager(arg) {
 		*/
         });
         YAHOO.util.History.initialize("yui-history-field", "yui-history-iframe");
-	
-
-
 }
 
-			
+var navStateHandler = function(state,msg) {
+        /*Scroll to top of page.  At this point, all nav features
+        should begin at the top of the page.  this may change
+        in teh future_*/
+        scroll(0,0);
+        var components = [];
+        components = state.split('A');
 
-			
-	
-
-
-
-
+        var section = components[0];
+        var iid = components[1];
+        var  pid = components[2]; //if we're caling a tri pic...
+	/*get your switch on*/
+        switch( section ) {
+                case "home":
+                        displayHome();
+                        break;
+	}
+}
+		
+/*Hook in to onload events for various browsers*/
 if( window.addEventListener ) 
         window.addEventListener("load",runOnLoad, false);
 else if (window.attachEvent) window.attachEvent("onload", runOnLoad);
 else window.onload = runOnLoad;
-
-
-
