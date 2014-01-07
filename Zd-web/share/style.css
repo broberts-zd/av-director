@@ -40,3 +40,15 @@ div.CenterDiv {
 .intro_aint {
   color: #e5e5e5;
   font-size: 15px; }
+
+.concourse_backdrop {
+  background-color: #e6e6e6;
+  height: 400px; }
+
+.panel_backing {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 25px;
+  height: 200px;
+  width: 400px; }

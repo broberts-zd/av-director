@@ -140,8 +140,8 @@ var navHome = function() {
 
 //display functions
 function displayHome(){
-	var e = new zdHomeConcourse();
 	var f = new zdIntro();
+	var e = new zdHomeConcourse();
 	e.test();
 }
 
