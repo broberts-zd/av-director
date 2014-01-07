@@ -27,7 +27,33 @@ div.CenterDiv {
 .TopPane {
 	height:$top_height;
 	background:url('http://cdn.zendesk.com/images/helpcenter/launch/hc-launch-slide-2.png');
-	
 }
+
+.intro_backing {
+	padding: 50px;
+}
+
+.intro_title {
+	color:$font_color;
+	font-size:40px;
+}
+
+.red_cross {
+	font-size:50px;
+	color:red;
+}
+
+.intro_question {
+	color:$off_white;;
+	font-family: DNLTL;
+	text-transform:none;
+	font-size:30px;
+}
+
+.intro_aint {
+	color: $off_white;
+	font-size:15px;
+}
+
 
 
