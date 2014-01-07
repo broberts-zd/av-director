@@ -1,6 +1,6 @@
 $font_color: #333333;
 $off_white: #e5e5e5;
-$top_height:100px;
+$top_height:300px;
 
 body {
     color: $font_color;
@@ -20,13 +20,13 @@ body {
 div.CenterDiv {
     margin-left: auto;
     margin-right: auto;
-    width: 944px;
+    width: 1270px;
     background-color:transparent;
 }
 
-.BackdropLogo {
+.TopPane {
 	height:$top_height;
-	background:url('http://www.zendesk.com/wp-content/themes/zendesk-twentyeleven/img/p-brand/downloads/Logo/Zendesk_logo_RGB.png');
+	background:url('http://cdn.zendesk.com/images/helpcenter/launch/hc-launch-slide-2.png');
 	
 }
 

@@ -13,9 +13,9 @@ body {
 div.CenterDiv {
   margin-left: auto;
   margin-right: auto;
-  width: 944px;
+  width: 1270px;
   background-color: transparent; }
 
-.BackdropLogo {
-  height: 100px;
-  background: url("http://www.zendesk.com/wp-content/themes/zendesk-twentyeleven/img/p-brand/downloads/Logo/Zendesk_logo_RGB.png"); }
+.TopPane {
+  height: 300px;
+  background: url("http://cdn.zendesk.com/images/helpcenter/launch/hc-launch-slide-2.png"); }
