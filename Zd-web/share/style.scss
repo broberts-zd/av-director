@@ -7,6 +7,15 @@ body {
     background-color:rgb(246,246,246);
 }
 
+#yui-history-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+}
+
 
 div.CenterDiv {
     margin-left: auto;

@@ -140,12 +140,14 @@ var navHome = function() {
 
 //display functions
 function displayHome(){
-	alert("we are in display home");
+	alert("you are in displayHome()");
+	alert(runOnLoad);
+	alert(zdHomeConcourse);
 	var e = new zdHomeConcourse();
+	e.test();
 }
 
 function startHistoryManager(arg) {
-	alert("we are starting history manager with state " + arg);
 	 /*YUI Histroy manager*/
         var bookmarkedState = YAHOO.util.History.getBookmarkedState("nav");
 	/*

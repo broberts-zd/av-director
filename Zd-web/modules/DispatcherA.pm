@@ -16,6 +16,17 @@ sub handler {
 	#define our fuctions in a hash
 	my %dispatcher = (
 	'/a/test' => 'test',
-	'/a/boring_test' => 'boringTest',
+	'/a/register' => 'register',
 	);
+
+
+        my $uri = $r->uri();
+
+        #then call the function
+        $dispatcher{$uri}($r);
+
+
+        #we have to return OK to mod_perl
+        return OK;
+}
 1;
