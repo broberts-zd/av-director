@@ -10,7 +10,7 @@ function zdIntro(args) {
 	l2.innerHTML = "+";
 	
 	var title = zdC("span","intro_title");
-	title.innerHTML = "______  ________";
+	title.innerHTML = "Project Disinfect";
 	
 	var ques = zdC("div","intro_question");
 	ques.innerHTML = "Viruses in attachments??";

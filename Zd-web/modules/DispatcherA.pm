@@ -17,6 +17,7 @@ sub handler {
 	my %dispatcher = (
 	'/a/test' => 'test',
 	'/a/register' => 'register',
+	'/a/get_simple_status_docket' => 'getSimleStatusDocket',
 	);
 
 

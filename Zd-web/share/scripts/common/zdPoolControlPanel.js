@@ -42,10 +42,10 @@ function zdPoolControlPanel(args) {
 		backing.appendChild(ctb);
 		/*YAHOOize these*/
 		var yanb = new YAHOO.widget.Button(anb);
-		yanb.set("label","Add New Node to Pool");
+		yanb.set("label","ADD New Node to Pool");
 		yanb.on("click",function(){alert("you clicked me");});
 		var yrnb = new YAHOO.widget.Button(rnb);
-		yrnb.set("label","Remove Node from Pool");
+		yrnb.set("label","REMOVE Node from Pool");
 		yrnb.on("click",function(){alert("ya clicked me dawg");});
 		var yctb = new YAHOO.widget.Button(ctb);
 		yctb.set("label","Change Add Node Threshold");

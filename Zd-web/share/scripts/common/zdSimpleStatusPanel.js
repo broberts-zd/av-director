@@ -20,20 +20,20 @@ function zdSimpleStatusPanel(args) {
 		backing.appendChild(title);	
 		backing.appendChild(s2);
 		backing.appendChild(zdC("div","panel_sep_1"));
-
 		/*show status line items*/
-		var numAttachmentScanned = zdC("div","panel_line_item");
-		numAttachmentScanned.innerHTML = "$" + 56;//data.past24hours.numAttachmentsScanned;
+		var expl = zdC("div","panel_expl");
+		expl.innerHTML = "**The following line items detail stats for the past <b>24</b> hours only.";
+		backing.appendChild(expl);
+		var numAttachmentsScanned = zdC("div","panel_line_item");
+		numAttachmentsScanned.innerHTML = "Number of attachments scanned: " + 56;//data.past24hours.numAttachmentsScanned;
 		var numVirusesFound = zdC("div","panel_line_item");
-		numVirusesFound.innerHTML = 20;//data.past24hours.numVirusFound;
+		numVirusesFound.innerHTML = "Number of viruses (infected attachments) found: " + 20;//data.past24hours.numVirusFound;
 		var lastDayExpense = zdC("div","panel_line_item");
-		lastDayExpense.innerHTML = "$" + 98.56;//data.past24hours.expense;
-
+		lastDayExpense.innerHTML = "Last 24 hours expense: $" + 98.56;//data.past24hours.expense;
 		backing.appendChild(numAttachmentsScanned);
 		backing.appendChild(numVirusesFound);
 		backing.appendChild(lastDayExpense);
 
-		
 		/*attach to parent node in DOM*/
 		args.thePar.appendChild(backing);
 	};
@@ -51,7 +51,7 @@ function zdSimpleStatusPanel(args) {
                         }
                  };
                  request.send(null);
-        };	
+    };	
 	this.assemble();
 }
  
