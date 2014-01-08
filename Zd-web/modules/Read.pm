@@ -10,7 +10,7 @@ use JSON;
 
 our $VERSION = 0.01;
 
-use Read::SimpleStatusDocket.pm
+use Zd::Read::SimpleStatusDocket;
 
 
 ############################
