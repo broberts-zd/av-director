@@ -23,12 +23,22 @@ function zdSimpleStatusPanel(args) {
 
 		/*show status line items*/
 		var numAttachmentScanned = zdC("div","panel_line_item");
+		numAttachmentScanned.innerHTML = "$" + 56;//data.past24hours.numAttachmentsScanned;
+		var numVirusesFound = zdC("div","panel_line_item");
+		numVirusesFound.innerHTML = 20;//data.past24hours.numVirusFound;
+		var lastDayExpense = zdC("div","panel_line_item");
+		lastDayExpense.innerHTML = "$" + 98.56;//data.past24hours.expense;
+
+		backing.appendChild(numAttachmentsScanned);
+		backing.appendChild(numVirusesFound);
+		backing.appendChild(lastDayExpense);
+
 		
 		/*attach to parent node in DOM*/
 		args.thePar.appendChild(backing);
 	};
 
-	this.fetch = function(){
+	this.fetch = function() {
                 var request = newRequest();
                 var url = anonurl + "get_simple_status_docket";
                 request.open("GET",url,true);
