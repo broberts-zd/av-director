@@ -6,9 +6,14 @@ function zdHomeConcourse(args){
 	var backing = zdC("div","concourse_backdrop");
 	var thePar = document.getElementById("MainContent");
 	thePar.appendChild(backing);
+		
+	backing.appendChild(giveSpace(3));
 
 	/*instantiate a controls panel*/
 	var controls = new zdPoolControlPanel({
+		thePar:backing
+	});
+	var simpleStatus = new zdSimpleStatusPanel({
 		thePar:backing
 	});
 

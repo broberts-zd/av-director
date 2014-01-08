@@ -1,7 +1,7 @@
-$font_color: #333333;
 $off_white: #e5e5e5;
 $top_height:300px;
 $light_gray:#e6e6e6;
+$font_color:#333333;
 
 body {
     color: $font_color;
@@ -44,6 +44,12 @@ div.CenterDiv {
 	color:red;
 }
 
+.panel_cross {
+	font-size:30px;
+	color:red;
+
+}
+
 .intro_question {
 	color:$off_white;
 	font-family: DNLTL;
@@ -66,9 +72,30 @@ div.CenterDiv {
 	background-color:white;
 	border-radius:8px;
 	padding:20px;
+	margin-top: 40px;
 	margin:25px;
 	height:200px;
 	width:400px;
+}
+
+.panel_title {
+	font-size:23px;
+	color:$font_color;
+	padding-left:4px;
+	padding-right:4px;
+	
+}
+
+.panel_sep_1 {
+	height:1px;
+	width:350px;
+	background-color:$font_color;
+	margin:3px;
+}
+
+.panel_status_line {
+	padding:3px;	
+	font-size:16px;
 }
 	
 	
