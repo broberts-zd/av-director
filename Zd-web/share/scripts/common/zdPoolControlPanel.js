@@ -20,13 +20,13 @@ function zdPoolControlPanel(args) {
 		backing.appendChild(zdC("div","panel_sep_1"));
 
 		/*Status board*/
-		var numNodes = zdC("div","panel_status_line");
+		var numNodes = zdC("div","panel_line_item");
 		numNodes.innerHTML = "Number of nodes in the pool:  " + 3;//data.numberOfNodes;
 		backing.appendChild(numNodes);
-		var addNodeThreshold = zdC("div","panel_status_line");
+		var addNodeThreshold = zdC("div","panel_line_item");
 		addNodeThreshold.innerHTML  = "Add new node threshold: " + 7;// data.newNodeThreshold;
 		backing.appendChild(addNodeThreshold);
-		var currentQueueLength = zdC("div","panel_status_line");
+		var currentQueueLength = zdC("div","panel_line_item");
 		currentQueueLength.innerHTML = "Number of nodes currently in the pool: " + 450;//data.currentQueueLength;
 		backing.appendChild(currentQueueLength);
 		/*separate this from the buttons below*/

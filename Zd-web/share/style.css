@@ -46,8 +46,7 @@ div.CenterDiv {
   font-size: 15px; }
 
 .concourse_backdrop {
-  background-color: #e6e6e6;
-  height: 400px; }
+  background-color: #e6e6e6; }
 
 .panel_backing {
   background-color: white;
@@ -70,6 +69,6 @@ div.CenterDiv {
   background-color: #333333;
   margin: 3px; }
 
-.panel_status_line {
+.panel_line_item {
   padding: 3px;
   font-size: 16px; }
