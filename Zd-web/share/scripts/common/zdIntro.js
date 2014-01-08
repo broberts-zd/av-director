@@ -13,14 +13,15 @@ function zdIntro(args) {
 	title.innerHTML = "Project Disinfect";
 	
 	var ques = zdC("div","intro_question");
-	ques.innerHTML = "Viruses in attachments??";
+	ques.innerHTML = "Viruses in attachments?";
 	var aint = zdC("div","intro_aint");
-	aint.innerHTML = "Ain't nobody got time for that!";
+	aint.innerHTML = "Ain't nobody got time for that.";
 
 	topPane.appendChild(backing);
 	backing.appendChild(l1);
 	backing.appendChild(title);
 	backing.appendChild(l2);
+	backing.appendChild(giveSpace(30));
 	backing.appendChild(ques);
 	backing.appendChild(aint);
 	

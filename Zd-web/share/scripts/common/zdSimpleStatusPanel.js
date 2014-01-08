@@ -25,7 +25,7 @@ function zdSimpleStatusPanel(args) {
 		expl.innerHTML = "**The following line items detail stats for the past <b>24</b> hours only.";
 		backing.appendChild(expl);
 		var numAttachmentsScanned = zdC("div","panel_line_item");
-		numAttachmentsScanned.innerHTML = "Number of attachments scanned: " + 56;//data.past24hours.numAttachmentsScanned;
+		numAttachmentsScanned.innerHTML = "Number of attachments scanned: " + data.past24hours.numAttachmentsScanned;
 		var numVirusesFound = zdC("div","panel_line_item");
 		numVirusesFound.innerHTML = "Number of viruses (infected attachments) found: " + 20;//data.past24hours.numVirusFound;
 		var lastDayExpense = zdC("div","panel_line_item");
@@ -52,6 +52,6 @@ function zdSimpleStatusPanel(args) {
                  };
                  request.send(null);
     };	
-	this.assemble();
+	this.fetch();
 }
  
